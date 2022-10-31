@@ -55,6 +55,7 @@
     if(confirm("«Вы действительно хотите удалить счёт?»")){
       Account.remove({id: this.lastOptions.account_id}, (err, response) => {
         App.updateWidgets()
+        location.reload();
       })
     };
   }
