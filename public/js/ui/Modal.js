@@ -16,7 +16,7 @@ class Modal {
       throw new Error("Передан пустой элемент!");
     }
     this.element = element;
-    this.registerEvents();
+    this.registerEvents();this
   }
 
   /**

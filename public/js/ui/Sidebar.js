@@ -38,7 +38,6 @@ class Sidebar {
       } else if(event.target.closest( ".menu-item_register" )) {
         App.getModal("register").open();
       } else if(event.target.closest( ".menu-item_logout" )){
-        let data = JSON.parse(localStorage.getItem("user"));
         User.logout((err, response) => {
           if(response.success){
             App.setState('init');

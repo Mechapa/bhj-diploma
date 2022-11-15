@@ -21,11 +21,10 @@ class CreateTransactionForm extends AsyncForm {
    renderAccountsList() {
     if(User.current()){
       Account.list(User.current(), (err, response) => {
-        if(response){
+        if(response && response.data){
           this.select.innerHTML = "";
-          response.data.forEach(item => {
-            this.select.insertAdjacentHTML("beforeEnd", `<option value="${item.id}">${item.name}</option>`); 
-          })
+          const renderData = (item) => `<option value="${item.id}">${item.name}</option>`;
+          this.select.innerHTML = response.data.reduce((total, item) => total + renderData(item), '');
         }
       });
     }

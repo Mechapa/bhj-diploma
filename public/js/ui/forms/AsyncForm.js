@@ -50,7 +50,7 @@ class AsyncForm {
   }
 
   onSubmit(options){
-    RegisterForm.onSubmit(options);
+
   }
 
   /**
