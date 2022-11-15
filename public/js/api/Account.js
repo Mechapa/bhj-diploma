@@ -11,13 +11,10 @@
    * */
   static get(id = '', callback){
     createRequest({
-      url: this.URL,
+      url: this.URL + '/' + id,
       method: "GET",
-      responseType: "json",
       id,
-      callback: (err, response) => {
-        callback(err, response);
-      }
+      callback
     })
   }
 }

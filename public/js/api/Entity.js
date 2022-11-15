@@ -14,7 +14,6 @@
     createRequest({
       url: this.URL,
       method: "GET",
-      responseType: "json",
       data, 
       callback
     });
@@ -29,7 +28,6 @@
     createRequest({
       url: this.URL,
       method: "PUT",
-      responseType: 'json',
       data, 
       callback
     })
@@ -43,7 +41,6 @@
     createRequest({
       url: this.URL,
       method: "DELETE",
-      responseType: "json",
       data,
       callback
     })
